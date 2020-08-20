@@ -1,0 +1,24 @@
+section img.nomod {
+    background: none;
+    box-shadow: none;
+    border: none;
+}
+
+section .textshadowed {
+    text-shadow: 0 0 10px #000;
+}
+
+div .onethirdpadded {
+    width:30%;
+    text-align: center;
+}
+
+img.maxthird {
+    width: 20%;
+    vertical-align: middle;
+    margin: 20px
+}
+
+.smalltext {
+    font-size: .8em
+}
