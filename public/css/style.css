@@ -22,3 +22,8 @@ img.maxthird {
 .smalltext {
     font-size: .8em
 }
+
+.shadowbox {
+    background: rgba(0,0,0,.75);
+    border-radius: 25px;
+}

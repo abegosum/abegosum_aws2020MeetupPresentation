@@ -1,159 +1,201 @@
 <!doctype html>
+<!-- Content Copyright 2020 Minnesota Public Radio -->
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
-	  <link rel="stylesheet" href="public/css/style.css">
-	  <link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
-	  <!-- Printing and PDF exports -->
-	  <script>
-	  	var link = document.createElement('link');
-	  	link.rel = 'stylesheet';
-	  	link.type = 'text/css';
-	  	link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
-	  	document.getElementsByTagName('head')[0].appendChild(link);
-	  </script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-			  <section>
-			  	<h3>Imagine, if you will...</h3>
-			  	<p class="fragment">It's 2:30 am...</p>
-			  	<p class="fragment">You're on a call with non-technical end users...</p>
-			  	<p class="fragment">Testing a system that hasn't been used in months.</p>
-			  	<p class="fragment">...it doesn't work.</p>
-			  	<img class="fragment" src="public/images/headdesk.gif" />
-			  </section>
+	<title>reveal.js</title>
 
-			  <section data-transition="convex">
-			  	<section>
-			  		<h2>Making Traditional Disaster Recovery Obsolete w/ AWS</h2>
-			  		<h4 class="fragment" style="font-family: 'Oleo Script', Helvetica, sans-serif">or How I Learned to Stop Worrying and Trust the Cloud</h4>
-			  	</section>
-			  	<section>
-			  		<h2>Overview</h2>
-			  		<ul>
-			  			<li class="fragment">About American Public Media Group, Minnesota Public Radio, and Me</li>
-			  			<li class="fragment">MPR, Disaster Recovery, and Its Problems</li>
-			  			<li class="fragment">Moving From DR to SLA - The Solution</li>
-			  			<li class="fragment">Q and A</li>
-			  		</ul>
-			  	</section>
-			  </section>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+	<link rel="stylesheet" href="public/css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
 
-			  <section data-background-transition="zoom">
-			  	<section data-background="#FFF">
-			  		<h3>About American Public Media Group</h3>
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
 
-			  		<div style="width: 100%; text-align: center;" >
-			  			<img src="public/images/apmg-logo.png" class="nomod" style="width:35%" /><br />
-			  		</div>
-			  		<hr class="fragment" />
-			  		<div style="width:100%; text-align: center" class="fragment">
-			  			<img src="public/images/apm-logo.svg" class="nomod" style="width:30%; margin: 20px" />
-			  			<img src="public/images/mpr_logo.png" class="nomod" style="width:15%; margin: 50px" />
-			  			<img src="public/images/kpcc-logo.svg" class="nomod" style="width:30%; margin: 20px" />
-			  		</div>
-			  	</section>
-			  	<section data-background="#fff" data-autoslide="1500">
-			  		<h3>About American Public Media</h3>
-			  		<hr />
-			  		<div style="width:100%; text-align:center">
-			  			<img src="public/images/bbc-world-service.png" class="fragment fade-up nomod maxthird" />
-			  			<img src="public/images/marketplace-logo.png" class="fragment fade-up nomod maxthird" />
-			  			<img src="public/images/marketplace-morning-logo.png" class="fragment fade-up nomod maxthird" />
-			  			<img src="public/images/marketplace-tech-logo.png" class="fragment fade-up nomod maxthird" />
-			  		</div>
-			  		<div style="width:100%; text-align:center">
-			  			<img src="public/images/apmreports-logo.png" class="fragment fade-up nomod maxthird" />
-			  			<img src="public/images/pipedreams.webp" class="fragment fade-up nomod maxthird" />
-			  			<img src="public/images/livefromhere-logo.jpg" class="fragment fade-up nomod maxthird" />
-			  			<img src="public/images/splendidtable-logo.png" class="fragment fade-up nomod maxthird" data-autoslide="0" />
-			  		</div>
-			  	</section>
-			  	<section data-background="public/images/mprbuilding.jpeg" data-background-transition="zoom">
-			  		<h3 class="textshadowed">About Minnesota Public Radio</h3>
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<!-- AGD -->
+			<section data-background="#191919">
+				<h3>Imagine, if you will...</h3>
+				<p class="fragment">It's 2:30 am...</p>
+				<p class="fragment">You're on a call with non-technical end users...</p>
+				<p class="fragment">Testing a system that hasn't been used in months.</p>
+				<p class="fragment">...it doesn't work.</p>
+				<img class="fragment" src="public/images/headdesk.gif" />
+			</section>
 
-			  		<div class="fragment" style="float: left; max-width: 50%; background: rgba(51,51,51,0.75); padding: 20px; color: #fff; border-radius: 10px;">
-			  			<p>Minnesota Radio Stations</p>
-			  			<hr />
-			  			<span class="fragment"><img src="public/images/mprnews-logo.png" class="nomod" /><br /></span>
-			  			<span class="fragment"><img src="public/images/thecurrent-logo.png" class="nomod" /><br /></span>
-			  			<span class="fragment"><img src="public/images/classicalmpr-logo.png" class="nomod" data-autoslide="0" /><br /></span>
-			  		</div>	
-			  
-			  		<div style="margin-top: 100px; float:right; width:45%; padding: 10px; background:rgba(226, 226, 226, 0.75); border-radius: 10px" >
-			  		   <img src="public/images/mpr_logo.png" class="nomod" />
-			  	    </div>
-			  	</section>
-			  	<section data-background="public/images/kpccbuilding.png" data-background-transition="zoom">
-			  		<h3 class="textshadowed">About Southern California Public Radio (KPCC)</h3>
+			<!-- Title and Overview -->
+			<section data-background="#191919" data-transition="convex">
+				<section>
+					<h2>Making Traditional Disaster Recovery Obsolete w/ AWS</h2>
+					<h4 class="fragment" style="font-family: 'Oleo Script', Helvetica, sans-serif">or How I Learned to
+						Stop Worrying and Trust the Cloud</h4>
+				</section>
+				<section>
+					<h2>Overview</h2>
+					<ul>
+						<li class="fragment">About American Public Media Group, Minnesota Public Radio, and Me</li>
+						<li class="fragment">MPR, Disaster Recovery, and Its Problems</li>
+						<li class="fragment">Moving From DR to SLA - The Solution</li>
+						<li class="fragment">Q and A</li>
+					</ul>
+				</section>
+			</section>
 
-			  		<div class="fragment" style="float: left; max-width: 50%; background: rgba(51,51,51,0.75); padding: 20px; color: #fff; border-radius: 10px;">
-			  			<p>5 different radio stations</p>
-			  			<hr />
-			  			<ul>
-			  				<li class="smalltext">89.3 - LA and Orange Counties</li>
-			  				<li class="smalltext">89.1 - Inland Empire</li>
-			  				<li class="smalltext">90.3 - Coachella Valley</li>
-			  				<li class="smalltext">93.3 - Palm Springs</li>
-			  				<li class="smalltext">89.5 - Ventura County</li>
-			  				<li class="smalltext">89.9 - Santa Barbara</li>
-			  			</ul>
-			  	    </div>
+			<!-- I. About MPR / Me -->
+			<section data-background-transition="zoom">
+				<section data-background="#FFF">
+					<h3>About American Public Media Group</h3>
 
-			  		<div style="margin-top: 100px; float:right; width:40%; height: 50%; padding: 10px; background:rgba(226, 226, 226, 0.75); border-radius: 10px" >
-			  		   <img src="public/images/kpcc-logo.svg" class="nomod" style="margin: 75px 0px" />
-			  	    </div>
-			  	</section>
-			  	<section data-background="#555" data-background-transition="zoom">
-			  		<h3 class="textshadowed">About Me</h3>
+					<div style="width: 100%; text-align: center;">
+						<img src="public/images/apmg-logo.png" class="nomod" style="width:35%" /><br />
+					</div>
+					<hr class="fragment" />
+					<div style="width:100%; text-align: center" class="fragment">
+						<img src="public/images/apm-logo.svg" class="nomod" style="width:30%; margin: 20px" />
+						<img src="public/images/mpr_logo.png" class="nomod" style="width:15%; margin: 50px" />
+						<img src="public/images/kpcc-logo.svg" class="nomod" style="width:30%; margin: 20px" />
+					</div>
+				</section>
+				<section data-background="#fff" data-autoslide="1500">
+					<h3>About American Public Media</h3>
+					<hr />
+					<div style="width:100%; text-align:center">
+						<img src="public/images/bbc-world-service.png" class="fragment fade-up nomod maxthird" />
+						<img src="public/images/marketplace-logo.png" class="fragment fade-up nomod maxthird" />
+						<img src="public/images/marketplace-morning-logo.png" class="fragment fade-up nomod maxthird" />
+						<img src="public/images/marketplace-tech-logo.png" class="fragment fade-up nomod maxthird" />
+					</div>
+					<div style="width:100%; text-align:center">
+						<img src="public/images/apmreports-logo.png" class="fragment fade-up nomod maxthird" />
+						<img src="public/images/pipedreams.webp" class="fragment fade-up nomod maxthird" />
+						<img src="public/images/livefromhere-logo.jpg" class="fragment fade-up nomod maxthird" />
+						<img src="public/images/splendidtable-logo.png" class="fragment fade-up nomod maxthird"
+							data-autoslide="0" />
+					</div>
+				</section>
+				<section data-background="public/images/mprbuilding.jpeg" data-background-transition="zoom">
+					<h3 class="textshadowed">About Minnesota Public Radio</h3>
 
-			  		<div class="fragment" style="float: left; max-width: 50%; background: rgba(51,51,51,0.75); padding: 20px; color: #fff; border-radius: 10px;">
-			  			<p>Aaron M. Bond</p>
-			  			<hr />
-			  			<ul>
-			  				<li class="smalltext">Developer at General Mills 4 Years</li>
-			  				<li class="smalltext">Sysadmin at General Mills for 2 Years</li>
-			  				<li class="smalltext">Sysadmin at MPR for 6 Years</li>
-			  				<li class="smalltext">MPR Transitioning to More "DevOps"</li>
-			  			</ul>
-			  	    </div>
-			  		
-			  		<div style="margin-top: 60px; float:right; width:40%; height: 50%; padding: 10px; " >
-			  		   <img src="public/images/aaron_avatar.jpg" class="nomod" style="border-radius: 50%;" />
-			  	    </div>
+					<div class="fragment"
+						style="float: left; max-width: 50%; background: rgba(51,51,51,0.75); padding: 20px; color: #fff; border-radius: 10px;">
+						<p>Minnesota Radio Stations</p>
+						<hr />
+						<span class="fragment"><img src="public/images/mprnews-logo.png" class="nomod" /><br /></span>
+						<span class="fragment"><img src="public/images/thecurrent-logo.png"
+								class="nomod" /><br /></span>
+						<span class="fragment"><img src="public/images/classicalmpr-logo.png" class="nomod"
+								data-autoslide="0" /><br /></span>
+					</div>
 
-			  	</section>
-			  </section>
+					<div
+						style="margin-top: 100px; float:right; width:45%; padding: 10px; background:rgba(226, 226, 226, 0.75); border-radius: 10px">
+						<img src="public/images/mpr_logo.png" class="nomod" />
+					</div>
+				</section>
+				<section data-background="public/images/kpccbuilding.png" data-background-transition="zoom">
+					<h3 class="textshadowed">About Southern California Public Radio (KPCC)</h3>
 
-			</div>
+					<div class="fragment"
+						style="float: left; max-width: 50%; background: rgba(51,51,51,0.75); padding: 20px; color: #fff; border-radius: 10px;">
+						<p>5 different radio stations</p>
+						<hr />
+						<ul>
+							<li class="smalltext">89.3 - LA and Orange Counties</li>
+							<li class="smalltext">89.1 - Inland Empire</li>
+							<li class="smalltext">90.3 - Coachella Valley</li>
+							<li class="smalltext">93.3 - Palm Springs</li>
+							<li class="smalltext">89.5 - Ventura County</li>
+							<li class="smalltext">89.9 - Santa Barbara</li>
+						</ul>
+					</div>
+
+					<div
+						style="margin-top: 100px; float:right; width:40%; height: 50%; padding: 10px; background:rgba(226, 226, 226, 0.75); border-radius: 10px">
+						<img src="public/images/kpcc-logo.svg" class="nomod" style="margin: 75px 0px" />
+					</div>
+				</section>
+				<section data-background="#555" data-background-transition="zoom">
+					<h3 class="textshadowed">About Me</h3>
+
+					<div class="fragment"
+						style="float: left; max-width: 50%; background: rgba(51,51,51,0.75); padding: 20px; color: #fff; border-radius: 10px;">
+						<p>Aaron M. Bond</p>
+						<hr />
+						<ul>
+							<li class="smalltext">Developer at General Mills 4 Years</li>
+							<li class="smalltext">Sysadmin at General Mills for 2 Years</li>
+							<li class="smalltext">Sysadmin at MPR for 6 Years</li>
+							<li class="smalltext">MPR Transitioning to More "DevOps"</li>
+						</ul>
+					</div>
+
+					<div style="margin-top: 60px; float:right; width:40%; height: 50%; padding: 10px; ">
+						<img src="public/images/aaron_avatar.jpg" class="nomod" style="border-radius: 50%;" />
+					</div>
+
+				</section>
+			</section>
+
+			<!-- II. Disaster Recovery and Issues -->
+			<section data-background="public/images/datacenter_bg.jpg" data-background-transition="zoom">
+				<section>
+					<h2 class="shadowbox">MPR, Disaster Recovery, and Its Problems</h2>
+					<div class="shadowbox fragment">
+						<ul>
+							<li>Goals of DR Project</li>
+							<li>Architecture of DR</li>
+							<li>Issues of this Approach</li>
+						</ul>
+					</div>
+				</section>
+
+				<!-- II. a. Goals of DR Project -->
+				<section>
+					<h3 class="shadowbox">Goals of DR Project</h3>
+					<div class="shadowbox fragment">
+						<ul>
+							<li>Co-located Datacenter</li>
+							<li class="fragment">Active / Passive Application Deployment</li>
+							<li class="fragment">Public Websites and Editing Live after Disaster in about 1 Hour</li>
+						</ul>
+					</div>
+				</section>
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			pdfSeparateFragments: false,
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
 </html>
