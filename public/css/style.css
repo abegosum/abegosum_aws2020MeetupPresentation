@@ -31,3 +31,7 @@ img.maxthird {
 .diagram img {
     height: 600px;
 }
+
+.diagram-wide img{
+    margin: 50px auto;
+}
