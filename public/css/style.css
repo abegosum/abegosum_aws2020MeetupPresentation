@@ -35,3 +35,7 @@ img.maxthird {
 .diagram-wide img{
     margin: 50px auto;
 }
+
+.strikethrough {
+    text-decoration: line-through;
+}
