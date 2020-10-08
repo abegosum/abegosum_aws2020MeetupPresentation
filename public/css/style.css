@@ -23,6 +23,10 @@ img.maxthird {
     font-size: .8em
 }
 
+.smallertext {
+    font-size: .5em
+}
+
 .shadowbox {
     background: rgba(0,0,0,.75);
     border-radius: 25px;
@@ -38,4 +42,8 @@ img.maxthird {
 
 .strikethrough {
     text-decoration: line-through;
+}
+
+.bottom-margin-container {
+    margin-bottom: 20px;
 }
