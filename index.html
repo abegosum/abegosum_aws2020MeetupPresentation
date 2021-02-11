@@ -39,7 +39,7 @@
 				<p class="fragment">...it doesn't work.</p>
 				<img class="fragment" src="public/images/headdesk.gif" />
 				<aside class="notes">
-					This audience may not need to imagine it!
+					Rod Serling impression
 				</aside>
 			</section>
 
@@ -54,7 +54,7 @@
 					<h2>Overview</h2>
 					<ul>
 						<li class="fragment"> Disaster Recovery and Its Problems </li>
-						<li class="fragment"> Moving From DR to SLA - The Solution </li>
+						<li class="fragment"> Moving From DR to AWS - The Solution </li>
 						<li class="fragment"> Progress and Priorities w/ Peter Rasmussen</li>
 						<li class="fragment">Q and A</li>
 					</ul>
@@ -84,6 +84,11 @@
 							<li class="fragment">Public Websites and Editing Live after Disaster in about 1 Hour</li>
 						</ul>
 					</div>
+					<aside class="notes">
+						<ul>
+							<li>Given gift of co-located space and hardware budget</li>
+						</ul>
+					</aside>
 				</section>
 
 				<!-- II. b. i. Architecture of DR - Existing Sites -->
@@ -94,16 +99,17 @@
 					</div>
 					<div class="r-stack diagram">
 						<img class="fragment fade-in-fade-out" src="public/images/nodrwebflow/webflow00.svg" />
-						<img class="fragment fade-in-fade-out" src="public/images/nodrwebflow/webflow01.svg" />
+						<!-- <img class="fragment fade-in-fade-out" src="public/images/nodrwebflow/webflow01.svg" />
 						<img class="fragment fade-in-fade-out" src="public/images/nodrwebflow/webflow02.svg" />
 						<img class="fragment fade-in-fade-out" src="public/images/nodrwebflow/webflow03.svg" />
 						<img class="fragment fade-in-fade-out" src="public/images/nodrwebflow/webflow00.svg" />
 						<img class="fragment fade-in-fade-out" src="public/images/nodreditflow/editflow01.svg" />
-						<img class="fragment fade-in-fade-out" src="public/images/nodreditflow/editflow02.svg" />
+						<img class="fragment fade-in-fade-out" src="public/images/nodreditflow/editflow02.svg" /> -->
 					</div>
 					<aside class="notes">
 						<ul>
-							<li>Vmware, microservice explanations</li>
+							<li>Vmware virtual machines - over 200 virtual machines</li>
+							<li>Heavy hardware requirements - NAS devices, servers, big beefy stuff for vmware, networking gear</li>
 						</ul>
 					</aside>
 				</section>
@@ -114,8 +120,8 @@
 						<h3>Architecture of Disaster Recovery</h3>
 					</div>
 					<div class="r-stack diagram-wide">
-						<img class="fragment fade-in-fade-out" src="public/images/mirrorflow/mirrorflow_00.png" />
-						<img class="fragment fade-in-fade-out" src="public/images/mirrorflow/mirrorflow_01.png" />
+						<img class="" src="public/images/mirrorflow/mirrorflow_00.png" />
+						<!-- <img class="fragment fade-in-fade-out" src="public/images/mirrorflow/mirrorflow_01.png" />
 						<img class="fragment fade-in-fade-out" src="public/images/mirrorflow/mirrorflow_02.png" />
 						<img class="fragment fade-in-fade-out" src="public/images/mirrorflow/mirrorflow_00.png" />
 						<img class="fragment fade-in-fade-out" src="public/images/mirrorflow/mirrorflow_03.png" />
@@ -125,8 +131,15 @@
 						<img class="fragment fade-in-fade-out" src="public/images/mirrorflow/mirrorflow_06.png" />
 						<img class="fragment fade-in-fade-out" src="public/images/mirrorflow/mirrorflow_07.png" />
 						<img class="fragment fade-in-fade-out" src="public/images/mirrorflow/mirrorflow_08.png" />
-						<img class="fragment fade-in-fade-out" src="public/images/mirrorflow/mirrorflow_09.png" />
+						<img class="fragment fade-in-fade-out" src="public/images/mirrorflow/mirrorflow_09.png" /> -->
 					</div>
+					<aside class="notes">
+						<p>Path of least resistence - duplicate the hardware</p>
+						<ul>
+							<li>Use config mgmt to duplicate configuration</li>
+							<li>Use replication to keep everything in sync</li>
+						</ul>
+					</aside>
 				</section>
 
 				<!-- II. c. Issues with Approach-->
@@ -139,10 +152,16 @@
 							<li class="fragment">Configuration and Code Drift</li>
 							<li class="fragment">Quarterly Test Requirements</li>
 							<li class="fragment">Requirement of Secondary Hardware</li>
+							<li class="fragment">Limited Scalability</li>
 						</ul>
 
 						<h4 class="fragment">Active / Passive DR is Antiquated</h4>
 					</div>
+					<aside class="notes">
+						<ul>
+							<li>Scalability - restricted by hardware, requires time and effort to create, configure vms</li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 
@@ -151,8 +170,7 @@
 
 				<section>
 					<div class="shadowbox bottom-margin-container">
-						<h2>Moving From DR to SLA</h2>
-						<h3>The Solution </h3>
+						<h2>Moving From Disaster Recovery to AWS</h2>
 					</div>
 					<div class="shadowbox fragment">
 						<ul>
@@ -173,6 +191,11 @@
 							<li class="fragment">Utilize Infrastructure as Code to Build Environment</li>
 						</ul>
 					</div>
+					<aside class="notes">
+						<ul>
+							<li>D-recovery to d-resilience: this is a paradigm shift, not just a technical one</li>
+						</ul>
+					</aside>
 				</section>
 
 				<!-- III. b. 1. Architecture - Services Used -->
@@ -206,35 +229,63 @@
 						<img class="fragment fade-in-fade-out" src="public/images/transitionflow/transition02.svg" />
 						<img class="fragment fade-in-fade-out" src="public/images/transitionflow/transition03.svg" />
 						<img class="fragment fade-in-fade-out" src="public/images/transitionflow/transition04.svg" />
-						<img class="fragment fade-in-fade-out" src="public/images/transitionflow/transition05.svg" />
+						<!-- <img class="fragment fade-in-fade-out" src="public/images/transitionflow/transition05.svg" /> -->
 						<!--<img class="fragment fade-in-fade-out" src="public/images/transitionflow/transition06.svg" />-->
 						<img class="fragment fade-in-fade-out" src="public/images/transitionflow/transition07.svg" />
 						<!-- <img class="fragment fade-in-fade-out" src="public/images/transitionflow/transition08.svg" />
 						<img class="fragment fade-in-fade-out" src="public/images/transitionflow/transition09.svg" /> -->
 						<img class="fragment fade-in-fade-out" src="public/images/transitionflow/transition11.svg" />
 						<!-- <img class="fragment fade-in-fade-out" src="public/images/configflow/configflowbase_00.svg" /> -->
-						<img class="fragment fade-in-fade-out" src="public/images/configflow/terraform00.svg" />
+						<!-- <img class="fragment fade-in-fade-out" src="public/images/configflow/terraform00.svg" />
 						<img class="fragment fade-in-fade-out" src="public/images/configflow/terraform01_ecr.svg" />
 						<img class="fragment fade-in-fade-out" src="public/images/configflow/terraform02_vpc.svg" />
 						<img class="fragment fade-in-fade-out" src="public/images/configflow/terraform03_rds.svg" />
-						<!-- <img class="fragment fade-in-fade-out" src="public/images/configflow/terraform04_acm_cf_01.svg" /> -->
+						<img class="fragment fade-in-fade-out" src="public/images/configflow/terraform04_acm_cf_01.svg" />
 						<img class="fragment fade-in-fade-out" src="public/images/configflow/terraform04_acm_cf_02.svg" />
-						<!-- <img class="fragment fade-in-fade-out" src="public/images/configflow/configflowbase_00.svg" /> -->
+						<img class="fragment fade-in-fade-out" src="public/images/configflow/configflowbase_00.svg" />
 						<img class="fragment fade-in-fade-out" src="public/images/configflow/eksctl_00.svg" />
 						<img class="fragment fade-in-fade-out" src="public/images/configflow/eksctl_01.svg" />
 						<img class="fragment fade-in-fade-out" src="public/images/configflow/eksctl_02.svg" />
-						<!-- <img class="fragment fade-in-fade-out" src="public/images/configflow/configflowbase_00.svg" /> -->
+						<img class="fragment fade-in-fade-out" src="public/images/configflow/configflowbase_00.svg" />
 						<img class="fragment fade-in-fade-out" src="public/images/configflow/puppet_00.svg" />
-						<!-- <img class="fragment fade-in-fade-out" src="public/images/configflow/puppet_01_deployments_01.svg" /> -->
+						<img class="fragment fade-in-fade-out" src="public/images/configflow/puppet_01_deployments_01.svg" />
 						<img class="fragment fade-in-fade-out" src="public/images/configflow/puppet_01_deployments_02.svg" />
 						<img class="fragment fade-in-fade-out" src="public/images/configflow/puppet_00.svg" />
-						<!-- <img class="fragment fade-in-fade-out" src="public/images/configflow/puppet_02_ingress_01.svg" /> -->
+						<img class="fragment fade-in-fade-out" src="public/images/configflow/puppet_02_ingress_01.svg" />
 						<img class="fragment fade-in-fade-out" src="public/images/configflow/puppet_02_ingress_02.svg" />
-						<!-- <img class="fragment fade-in-fade-out" src="public/images/configflow/configflowbase_00.svg" /> -->
+						<img class="fragment fade-in-fade-out" src="public/images/configflow/configflowbase_00.svg" />
 						<img class="fragment fade-in-fade-out" src="public/images/configflow/gitlab_00.svg" />
 						<img class="fragment fade-in-fade-out" src="public/images/configflow/gitlab_01_container_ecr_push.svg" />
-						<img class="fragment fade-in-fade-out" src="public/images/configflow/gitlab_02_kubectl_rollout.svg" />
+						<img class="fragment fade-in-fade-out" src="public/images/configflow/gitlab_02_kubectl_rollout.svg" /> -->
 					</div>
+					<aside class="notes">
+						<ul>
+							<li>Kubernetes explanation vs virtual machines</li>
+						</ul>
+					</aside>
+				</section>
+
+				<section>
+					<div class="shadowbox bottom-margin-container">
+						<h3>Cloud Architecture</h3>
+						<h4>Configuration Managers</h4>
+					</div>
+					<div class="whitebox">
+						<div style="width:100%; text-align: center;">
+							<img src="public/images/configmgmt/Terraform_Logo.svg" class="fragment fade-up nomod maxthird" />
+							<img src="public/images/configmgmt/eksctl_logo.png" class="fragment fade-up nomod maxthird" />
+							<img src="public/images/configmgmt/puppet_logo.png" class="fragment fade-up nomod maxthird" />
+							<img src="public/images/configmgmt/gitlab_logo.svg" class="fragment fade-up nomod maxthird" />
+						</div>
+					</div>
+					<aside class="notes">
+						<ul>
+							<li>TF - AWS resources, access accounts, software defined networking, etc</li>
+							<li>eksctl - defines a kubernetes cluster</li>
+							<li>Puppet - takes application definitions and creates kubernetes configs</li>
+							<li>Gitlab - Packages our applications for us and pushes them to amazon</li>
+						</ul>
+					</aside>
 				</section>
 
 				<!-- III. c. Benefits-->
@@ -248,8 +299,15 @@
 							<li class="fragment">Disaster Resilience<span > - No Need for Quarterly Tests!</span></li>
 							<li class="fragment">Self-Documenting, Repeatable Configuration</li>
 							<li class="fragment">(Nearly) Interuptionless Live Upgrades</li>
+							<li class="fragment">(Nearly) Unlimited Rapid Scalability</li>
 						</ul>
 					</div>
+					<aside class="notes">
+						<ul>
+							<li>Scalability limited only by budget at the time</li>
+							<li>What once took hours to days to scale now takes minutes to hours at most</li>
+						</ul>
+					</aside>
 				</section>
 
 				<!-- III. - aside - Progress-->
